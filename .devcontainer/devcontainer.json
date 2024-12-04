@@ -4,7 +4,7 @@
   "forwardPorts": [9000],
   "runArgs": ["--env", "VAR1=abcd", "VAR2=defg"],
   "containerUser": "root",
-  "remoteUser": "vscode",
+  "remoteUser": "node",
   "customizations": {
     "vscode": {
       "extensions": ["streetsidesoftware.code-spell-checker"]
