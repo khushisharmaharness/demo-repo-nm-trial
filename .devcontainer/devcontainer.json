@@ -2,8 +2,7 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
   "postCreateCommand": "npm install",
   "forwardPorts": [9000],
-  "containerEnv": {
-    "VAR1": "abcd",
-    "VAR2": "defg"
-  }
+  "runArgs": ["--env", "VAR1=abcd", "VAR2=defg"],
+  "containerUser": "root",
+  "remoteUser": "user123"
 }
