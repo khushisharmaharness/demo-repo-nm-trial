@@ -1,13 +1,4 @@
 {
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
-  "postCreateCommand": "npm install",
-  "forwardPorts": [9000],
-  "runArgs": ["--env", "VAR1=abcd", "VAR2=defg"],
-  "containerUser": "root",
-  "remoteUser": "node",
-  "customizations": {
-    "vscode": {
-      "extensions": ["streetsidesoftware.code-spell-checker"]
-    }
-  }
+  "postCreateCommand": "npm install"
 }
