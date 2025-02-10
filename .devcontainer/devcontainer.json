@@ -1,4 +1,16 @@
 {
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
-  "postCreateCommand": "npm install"
+  "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+  "postCreateCommand": "npm install -g @devcontainers/cli",
+  "postStartCommand":"echo \"executing post start command\"",
+  "forwardPorts": [9000],
+  "init":true,"privileged":false,
+  "runArgs":["--privileged","--security-opt","seccomp=unconfined","--cap-add","SYS_PTRACE"],
+  "containerUser": "root",
+  "containerEnv": {
+        "VAR1": "value1",
+        "VAR2": "value2"
+  }
 }
